@@ -78,6 +78,8 @@ MACSEC_OPEN_PKGS:= kmod-qca-nss-macsec wpa-supplicant-macsec hostapd-macsec
 NSS_L2TP:= kmod-l2tp kmod-l2tp-ip kmod-l2tp-eth
 
 WIFI_PLUGINS:=kmod-qca-wifi-plugins
+NSS_PLUGINS:=kmod-qca-nss-wifi-plugins
+ATH_CLIENT:=kmod-qca-nss-ppe-ath-clients
 
 DEFAULT_PACKAGES += -dnsmasq
 
