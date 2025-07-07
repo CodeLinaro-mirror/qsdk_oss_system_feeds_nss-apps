@@ -118,8 +118,6 @@ IPSEC:=kmod-ipsec kmod-ipsec4 kmod-ipsec6
 
 NSS_USERSPACE_OSS:=ppecfg
 
-NSS_FLOWID:=ifli
-
 NSS_FLS:=kmod-qca-nss-fls kmod-qca-nss-fls-lite
 
 EMESH_SP:=kmod-emesh-sp
