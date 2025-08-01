@@ -128,7 +128,7 @@ EMESH_SP:=kmod-emesh-sp
 DPDK:=dpdk-tools kmod-qca-nss-dpdk-cfgmgr kmod-nss-ppe-uio
 
 EXTRA_NETWORKING:= $(CD_ROUTER) kmod-qca-nss-macsec \
-	$(MACSEC_OPEN_PKGS) $(NSS_CRYPTO) $(NSS_CLIENTS_STANDARD)
+	$(MACSEC_OPEN_PKGS) $(NSS_CRYPTO) $(NSS_CLIENTS_STANDARD) $(WIFI_PLUGINS) $(NSS_PLUGINS) $(ATH_CLIENT)
 
 STRONGSWAN:=strongswan strongswan-default strongswan-mod-ctr strongswan-mod-gcm strongswan-mod-kdf strongswan-mod-openssl strongswan-mod-uci
 
