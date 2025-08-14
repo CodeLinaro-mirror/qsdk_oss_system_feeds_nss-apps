@@ -15,21 +15,21 @@ QCA_ECM_PREMIUM:= kmod-qca-nss-ecm-premium kmod-qca-nss-ecm-wifi-plugin
 NSS_PPE_256:= kmod-qca-nss-ppe \
 	kmod-qca-nss-ppe-vp \
 	kmod-qca-nss-ppe-bridge-mgr \
-	kmod-qca-nss-pppoe-mgr \
+	kmod-qca-nss-ppe-pppoe-mgr \
 	kmod-qca-nss-ppe-ds \
 	kmod-qca-nss-ppe-dsa-mgr
 
 NSS_PPE_16M:= kmod-qca-nss-ppe \
 	kmod-qca-nss-ppe-vp \
 	kmod-qca-nss-ppe-bridge-mgr \
-	kmod-qca-nss-pppoe-mgr \
+	kmod-qca-nss-ppe-pppoe-mgr \
 	kmod-qca-nss-ppe-lag-mgr \
 	kmod-qca-nss-ppe-dsa-mgr
 
 NSS_PPE:= kmod-qca-nss-ppe \
 	kmod-qca-nss-ppe-vp \
 	kmod-qca-nss-ppe-bridge-mgr \
-	kmod-qca-nss-pppoe-mgr \
+	kmod-qca-nss-ppe-pppoe-mgr \
 	kmod-qca-nss-ppe-lag-mgr \
 	kmod-qca-nss-ppe-tunipip6 \
 	kmod-qca-nss-gre-mgr \
