@@ -32,7 +32,7 @@ NSS_PPE:= kmod-qca-nss-ppe \
 	kmod-qca-nss-ppe-pppoe-mgr \
 	kmod-qca-nss-ppe-lag-mgr \
 	kmod-qca-nss-ppe-tunipip6 \
-	kmod-qca-nss-gre-mgr \
+	kmod-qca-nss-ppe-gre-mgr \
 	kmod-qca-nss-ppe-vxlanmgr \
 	kmod-qca-nss-ppe-mapt \
 	kmod-qca-nss-ppe-rule \
