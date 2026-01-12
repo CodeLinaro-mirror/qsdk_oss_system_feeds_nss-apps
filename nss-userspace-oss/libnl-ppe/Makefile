@@ -27,12 +27,19 @@ TOOL_CFLAGS:= -I$(STAGING_DIR)/usr/include/qca-nss-ppe \
 
 TOOL_LDFLAGS:= -L$(STAGING_DIR)/ppenl_lib
 
+ifeq ($(CONFIG_TARGET_ipq),y)
+subtarget:=$(SUBTARGET)
+else
+subtarget:=$(CONFIG_TARGET_BOARD)
+endif
+
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
 		CC="$(TARGET_CC)" \
 		AR="$(TARGET_AR) " \
 		CFLAGS="$(TOOL_CFLAGS)" \
-		LD_LIBRARY_PATH="$(TOOL_LDFLAGS)"
+		LD_LIBRARY_PATH="$(TOOL_LDFLAGS)" \
+		SoC="$(subtarget)"
 endef
 
 #TODO: Remove of the following which is not being used

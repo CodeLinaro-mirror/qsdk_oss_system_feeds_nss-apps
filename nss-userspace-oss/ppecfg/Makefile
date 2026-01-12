@@ -29,11 +29,18 @@ TOOL_CFLAGS:= $(TARGET_CFLAGS) -I$(STAGING_DIR)/usr/include/qca-nss-ppe \
 
 TOOL_LDFLAGS:= $(TARGET_LDFLAGS) -L$(STAGING_DIR)/ppenl_lib
 
+ifeq ($(CONFIG_TARGET_ipq),y)
+subtarget:=$(SUBTARGET)
+else
+subtarget:=$(CONFIG_TARGET_BOARD)
+endif
+
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
 		CC="$(TARGET_CC)" \
 		CFLAGS="$(TOOL_CFLAGS)" \
-		LD_LIBRARY_PATH="$(TOOL_LDFLAGS)"
+		LD_LIBRARY_PATH="$(TOOL_LDFLAGS)" \
+		SoC="$(subtarget)"
 endef
 
 define Package/ppecfg/install
