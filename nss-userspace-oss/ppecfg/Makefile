@@ -27,6 +27,10 @@ TOOL_CFLAGS:= $(TARGET_CFLAGS) -I$(STAGING_DIR)/usr/include/qca-nss-ppe \
 	      -I$(STAGING_DIR)/usr/include/libnl3 \
 	      -I$(STAGING_DIR)/usr/include/libnl-ppe \
 
+ifeq ($(CONFIG_TARGET_ipq96xx)$(CONFIG_TARGET_ipq52xx), y)
+TOOL_CFLAGS+= -I$(STAGING_DIR)/usr/include/qca-nss-dp
+endif
+
 TOOL_LDFLAGS:= $(TARGET_LDFLAGS) -L$(STAGING_DIR)/ppenl_lib
 
 ifeq ($(CONFIG_TARGET_ipq),y)

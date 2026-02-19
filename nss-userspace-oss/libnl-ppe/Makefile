@@ -25,6 +25,10 @@ endef
 TOOL_CFLAGS:= -I$(STAGING_DIR)/usr/include/qca-nss-ppe \
               -I$(STAGING_DIR)/usr/include/libnl3
 
+ifeq ($(CONFIG_TARGET_ipq96xx)$(CONFIG_TARGET_ipq52xx), y)
+TOOL_CFLAGS+= -I$(STAGING_DIR)/usr/include/qca-nss-dp
+endif
+
 TOOL_LDFLAGS:= -L$(STAGING_DIR)/ppenl_lib
 
 ifeq ($(CONFIG_TARGET_ipq),y)
