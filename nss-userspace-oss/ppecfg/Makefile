@@ -35,6 +35,14 @@ else
 subtarget:=$(CONFIG_TARGET_BOARD)
 endif
 
+ifneq ($(CONFIG_TARGET_ipq52xx)$(CONFIG_TARGET_ipq96xx),)
+ifneq ($(CONFIG_KERNEL_IPQ_MEM_PROFILE),256)
+ifneq ($(CONFIG_LOWMEM_FLASH),y)
+MAKE_OPTS+=PPE_TUN_RPS_ENABLED=y
+endif
+endif
+endif
+
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
 		CC="$(TARGET_CC)" \
@@ -51,6 +59,13 @@ define Package/ppecfg/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ppecfg_policer_config.json $(1)/etc/ppecfg/ppecfg_policer_config.json
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/mcast_policer_config.json $(1)/etc/ppecfg/policer_default_cfg.json
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ppecfg_exception_config.json $(1)/etc/ppecfg/ppecfg_exception_config.json
+ifneq ($(CONFIG_TARGET_ipq52xx)$(CONFIG_TARGET_ipq96xx),)
+ifneq ($(CONFIG_KERNEL_IPQ_MEM_PROFILE),256)
+ifneq ($(CONFIG_LOWMEM_FLASH),y)
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ppecfg_tun_rps_config.json $(1)/etc/ppecfg/ppecfg_tun_rps_config.json
+endif
+endif
+endif
 
 ifeq ($(CONFIG_TARGET_ipq95xx),y)
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/mcast_acl_ipq95xx_config.json $(1)/etc/ppecfg/acl_default_cfg.json
