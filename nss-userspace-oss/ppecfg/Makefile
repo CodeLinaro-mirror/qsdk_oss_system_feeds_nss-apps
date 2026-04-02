@@ -52,7 +52,8 @@ define Build/Compile
 		CC="$(TARGET_CC)" \
 		CFLAGS="$(TOOL_CFLAGS)" \
 		LD_LIBRARY_PATH="$(TOOL_LDFLAGS)" \
-		SoC="$(subtarget)"
+		SoC="$(subtarget)" \
+		$(MAKE_OPTS)
 endef
 
 define Package/ppecfg/install

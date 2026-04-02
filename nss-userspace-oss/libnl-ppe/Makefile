@@ -51,7 +51,8 @@ define Build/Compile
 		AR="$(TARGET_AR) " \
 		CFLAGS="$(TOOL_CFLAGS)" \
 		LD_LIBRARY_PATH="$(TOOL_LDFLAGS)" \
-		SoC="$(subtarget)"
+		SoC="$(subtarget)" \
+		$(MAKE_OPTS)
 endef
 
 #TODO: Remove of the following which is not being used
