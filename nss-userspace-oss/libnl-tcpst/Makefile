@@ -20,7 +20,7 @@ define Package/libnl-tcpst
   SECTION:=Libs
   CATEGORY:=Libraries
   TITLE:=Library to facilitate communication from user to kernel for the TCP ST netlink families
-  DEPENDS:=@TARGET_ipq95xx||TARGET_ipq53xx||TARGET_ipq54xx +libnl +kmod-qca-nss-netfn-tcpst
+  DEPENDS:=@TARGET_ipq95xx||TARGET_ipq53xx||TARGET_ipq54xx||TARGET_ipq52xx||TARGET_ipq96xx +libnl +kmod-qca-nss-netfn-tcpst
 endef
 
 define Package/libnl-tcpst/description
