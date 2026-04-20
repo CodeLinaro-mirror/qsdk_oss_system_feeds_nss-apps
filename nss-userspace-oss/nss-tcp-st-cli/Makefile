@@ -20,7 +20,7 @@ define Package/nss-tcp-st-cli
   SECTION:=utils
   CATEGORY:=Utilities
   TITLE:=NSS TCP SpeedTest
-  DEPENDS:=@TARGET_ipq95xx||TARGET_ipq53xx||TARGET_ipq54xx +libnl +kmod-qca-nss-netfn-tcpst +libnl-tcpst +libcurl
+  DEPENDS:=@TARGET_ipq95xx||TARGET_ipq53xx||TARGET_ipq54xx||TARGET_ipq52xx||TARGET_ipq96xx +libnl +kmod-qca-nss-netfn-tcpst +libnl-tcpst +libcurl
 endef
 
 define Package/nss-tcp-st-cli/description
