@@ -75,6 +75,12 @@ endif
 ifeq ($(CONFIG_TARGET_ipq95xx),y)
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/mcast_acl_ipq95xx_config.json $(1)/etc/ppecfg/acl_default_cfg.json
 endif
+ifeq ($(CONFIG_TARGET_ipq96xx),y)
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/mcast_acl_ipq96xx_config.json $(1)/etc/ppecfg/acl_default_cfg.json
+endif
+ifeq ($(CONFIG_TARGET_ipq52xx),y)
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/mcast_acl_ipq52xx_config.json $(1)/etc/ppecfg/acl_default_cfg.json
+endif
 ifeq ($(CONFIG_TARGET_ipq53xx),y)
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/mcast_acl_ipq53xx_config.json $(1)/etc/ppecfg/acl_default_cfg.json
 endif
